@@ -173,7 +173,9 @@ if __name__ == '__main__':
         animation_frames.append(
             (W_opt.numpy()[0, 0], W_opt.numpy()[1, 0], b_opt.numpy(), loss.numpy())
         )
+        # 每20次迭代打印一次损失值和准确率
         if i % 20 == 0:
+            # 格式化输出损失值（保留4位有效数字）和准确率（保留4位有效数字）
             print(f'loss: {loss.numpy():.4}\t accuracy: {accuracy.numpy():.4}')
 
     # 创建图形
